@@ -10,11 +10,22 @@ import UIKit
 import MapKit
 class ViewController: UIViewController {
 
-    let type:String="type"
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkLocationAuthorizationStatus()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+           // mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -43,5 +43,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To help you in finding your friends</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To locate interesting places</string>
 </dict>
 </plist>
