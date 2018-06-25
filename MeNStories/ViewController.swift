@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
         centerUserLocationOnMap(location: initialLocation)
+        mapView.delegate=self
     }
     
     func checkLocationAuthorizationStatus() {
@@ -41,14 +42,41 @@ class ViewController: UIViewController {
     
     //helper methods
     func centerUserLocationOnMap(location:CLLocation){
+        
+        let annotation = CustomAnnotations(title: "where am i", locationName: "location", location: CLLocationCoordinate2D(latitude: initialLocation.coordinate.latitude, longitude: initialLocation.coordinate.longitude))
         let regionDistance:CLLocationDistance = 500
         let coordinateRegion=MKCoordinateRegionMakeWithDistance(location.coordinate,regionDistance, regionDistance)
         mapView.setRegion(coordinateRegion, animated: true)
-        mapView.addAnnotation(<#T##annotation: MKAnnotation##MKAnnotation#>)
+        
+        mapView.addAnnotation(annotation)
 
     }
     
 
 
+}
+
+extension ViewController:MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? CustomAnnotations else{
+            return nil
+        }
+        
+        var view:MKMarkerAnnotationView
+        let identifier = "marker"
+        if let dequedView=mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as?MKMarkerAnnotationView {
+            dequedView.annotation=annotation;
+            view=dequedView
+        }
+        
+        else{
+            view=MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout=true
+            view.calloutOffset=CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView=UIButton(type: .detailDisclosure)
+        }
+        
+        return view
+    }
 }
 
