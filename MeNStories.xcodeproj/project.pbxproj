@@ -58,11 +58,11 @@
 			children = (
 				84EB9CB820DFEAEA005A4252 /* AppDelegate.swift */,
 				84EB9CBA20DFEAEA005A4252 /* ViewController.swift */,
+				84EB9CCA20E0BE22005A4252 /* CustomAnnotations.swift */,
 				84EB9CBC20DFEAEA005A4252 /* Main.storyboard */,
 				84EB9CBF20DFEAEB005A4252 /* Assets.xcassets */,
 				84EB9CC120DFEAEB005A4252 /* LaunchScreen.storyboard */,
 				84EB9CC420DFEAEC005A4252 /* Info.plist */,
-				84EB9CCA20E0BE22005A4252 /* CustomAnnotations.swift */,
 			);
 			path = MeNStories;
 			sourceTree = "<group>";

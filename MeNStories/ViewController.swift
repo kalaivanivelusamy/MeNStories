@@ -10,9 +10,30 @@ import UIKit
 import MapKit
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mapViewTrailingC: NSLayoutConstraint!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapViewLeadingC: NSLayoutConstraint!
+
     let locationManager = CLLocationManager()
     let initialLocation=CLLocation(latitude: 12.9804141, longitude: 77.7023445)
-    @IBOutlet weak var mapView: MKMapView!
+    
+    var hamburgerMenuVisible = false;
+    
+    @IBAction func hamburgerTapped(_ sender: Any) {
+        
+        if !hamburgerMenuVisible{
+            mapViewLeadingC.constant = 150
+            mapViewTrailingC.constant = -150
+            hamburgerMenuVisible = true
+        }
+        else{
+            mapViewTrailingC.constant = 0
+            mapViewLeadingC.constant = 0
+            hamburgerMenuVisible = false
+        }
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,7 +93,7 @@ extension ViewController:MKMapViewDelegate{
         else{
             view=MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout=true
-            view.calloutOffset=CGPoint(x: -5, y: 5)
+            view.calloutOffset=CGPoint(x: 5, y: 5)
             view.rightCalloutAccessoryView=UIButton(type: .detailDisclosure)
         }
         
