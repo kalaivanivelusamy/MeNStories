@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Alamofire
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapViewTrailingC: NSLayoutConstraint!

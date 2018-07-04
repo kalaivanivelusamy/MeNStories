@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843CF9B720ED46E600D3314A /* MyStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CF9B620ED46E600D3314A /* MyStories.swift */; };
 		84EB9CB920DFEAEA005A4252 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB9CB820DFEAEA005A4252 /* AppDelegate.swift */; };
 		84EB9CBB20DFEAEA005A4252 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB9CBA20DFEAEA005A4252 /* ViewController.swift */; };
 		84EB9CBE20DFEAEA005A4252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EB9CBC20DFEAEA005A4252 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		1D939A3A51ACB94C1366156E /* Pods_MeNStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeNStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38603B5C2006BB4BCD018E68 /* Pods-MeNStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeNStories.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeNStories/Pods-MeNStories.release.xcconfig"; sourceTree = "<group>"; };
+		843CF9B620ED46E600D3314A /* MyStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStories.swift; sourceTree = "<group>"; };
 		84EB9CB520DFEAEA005A4252 /* MeNStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeNStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB9CB820DFEAEA005A4252 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EB9CBA20DFEAEA005A4252 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				84EB9CBA20DFEAEA005A4252 /* ViewController.swift */,
 				84EB9CCA20E0BE22005A4252 /* CustomAnnotations.swift */,
 				84EB9CBC20DFEAEA005A4252 /* Main.storyboard */,
+				843CF9B620ED46E600D3314A /* MyStories.swift */,
 				84EB9CBF20DFEAEB005A4252 /* Assets.xcassets */,
 				84EB9CC120DFEAEB005A4252 /* LaunchScreen.storyboard */,
 				84EB9CC420DFEAEC005A4252 /* Info.plist */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84EB9CBB20DFEAEA005A4252 /* ViewController.swift in Sources */,
+				843CF9B720ED46E600D3314A /* MyStories.swift in Sources */,
 				84EB9CCB20E0BE22005A4252 /* CustomAnnotations.swift in Sources */,
 				84EB9CB920DFEAEA005A4252 /* AppDelegate.swift in Sources */,
 			);
