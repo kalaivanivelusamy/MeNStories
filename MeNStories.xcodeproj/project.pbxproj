@@ -13,9 +13,12 @@
 		84EB9CC020DFEAEB005A4252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EB9CBF20DFEAEB005A4252 /* Assets.xcassets */; };
 		84EB9CC320DFEAEB005A4252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EB9CC120DFEAEB005A4252 /* LaunchScreen.storyboard */; };
 		84EB9CCB20E0BE22005A4252 /* CustomAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB9CCA20E0BE22005A4252 /* CustomAnnotations.swift */; };
+		C8B64AA96CD3883912A3636F /* Pods_MeNStories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D939A3A51ACB94C1366156E /* Pods_MeNStories.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D939A3A51ACB94C1366156E /* Pods_MeNStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeNStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38603B5C2006BB4BCD018E68 /* Pods-MeNStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeNStories.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeNStories/Pods-MeNStories.release.xcconfig"; sourceTree = "<group>"; };
 		84EB9CB520DFEAEA005A4252 /* MeNStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeNStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EB9CB820DFEAEA005A4252 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EB9CBA20DFEAEA005A4252 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		84EB9CC220DFEAEB005A4252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84EB9CC420DFEAEC005A4252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84EB9CCA20E0BE22005A4252 /* CustomAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotations.swift; sourceTree = "<group>"; };
+		91DF4F6DD8462DA8C5BF2EE7 /* Pods-MeNStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeNStories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeNStories/Pods-MeNStories.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B64AA96CD3883912A3636F /* Pods_MeNStories.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		481AE485C6134677B78CB67B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D939A3A51ACB94C1366156E /* Pods_MeNStories.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84EB9CAC20DFEAEA005A4252 = {
 			isa = PBXGroup;
 			children = (
 				84EB9CB720DFEAEA005A4252 /* MeNStories */,
 				84EB9CB620DFEAEA005A4252 /* Products */,
+				B9E0DD17A2FEC95B1DB28E7B /* Pods */,
+				481AE485C6134677B78CB67B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = MeNStories;
 			sourceTree = "<group>";
 		};
+		B9E0DD17A2FEC95B1DB28E7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91DF4F6DD8462DA8C5BF2EE7 /* Pods-MeNStories.debug.xcconfig */,
+				38603B5C2006BB4BCD018E68 /* Pods-MeNStories.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EB9CC720DFEAEC005A4252 /* Build configuration list for PBXNativeTarget "MeNStories" */;
 			buildPhases = (
+				8D9A013E694145B9FA92B6FE /* [CP] Check Pods Manifest.lock */,
 				84EB9CB120DFEAEA005A4252 /* Sources */,
 				84EB9CB220DFEAEA005A4252 /* Frameworks */,
 				84EB9CB320DFEAEA005A4252 /* Resources */,
+				9C24AE696F91009D840F49A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D9A013E694145B9FA92B6FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeNStories-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C24AE696F91009D840F49A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeNStories/Pods-MeNStories-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeNStories/Pods-MeNStories-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84EB9CB120DFEAEA005A4252 /* Sources */ = {
@@ -282,6 +347,7 @@
 		};
 		84EB9CC820DFEAEC005A4252 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF4F6DD8462DA8C5BF2EE7 /* Pods-MeNStories.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +365,7 @@
 		};
 		84EB9CC920DFEAEC005A4252 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38603B5C2006BB4BCD018E68 /* Pods-MeNStories.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
